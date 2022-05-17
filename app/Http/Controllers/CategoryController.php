@@ -12,8 +12,9 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        // dd($request->session()->all());
         $categories = Category::get();
 
         return view('categories.index', compact('categories'));
